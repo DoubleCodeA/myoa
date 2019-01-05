@@ -32,8 +32,8 @@ public class UserController {
         userService.update(user);
     }
 
-    @RequestMapping("/delete")
-    public void  delete(@RequestBody Integer[] ids){
+    @RequestMapping("/delete/{ids}")
+    public void  delete(@PathVariable Integer[] ids){
         userService.delete(ids);
     }
 
